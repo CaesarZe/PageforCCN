@@ -1,0 +1,71 @@
+/* HELab-style Lab Website (CN-first) */
+/* Basic Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC","PingFang SC","Microsoft Yahei",sans-serif;color:#1f2d3d;background:#f6f8fb;line-height:1.6}
+
+/* Header */
+.site-header{background:linear-gradient(120deg,#0b3e6b,#0a2f56);color:#fff;padding:28px 16px;border-bottom:3px solid rgba(255,255,255,.12)}
+.site-title{font-size:28px;font-weight:700;letter-spacing:.5px}
+.site-subtitle{opacity:.92;margin-top:6px}
+
+/* Navbar */
+.navbar{background:#0a2f56;color:#fff}
+.navbar .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:0 8px}
+.navbar a.logo{display:flex;align-items:center;gap:8px;padding:10px 8px;text-decoration:none;color:#fff;font-weight:700}
+.navbar nav{flex:1}
+.navbar ul{list-style:none;display:flex;flex-wrap:wrap}
+.navbar li{position:relative}
+.navbar a{display:block;padding:12px 14px;color:#fff;text-decoration:none;border-radius:6px}
+.navbar a:hover,.navbar .active>a{background:#0b3e6b}
+/* Dropdown */
+.navbar li.has-dropdown:hover>ul{display:block}
+.navbar li.has-dropdown>ul{display:none;position:absolute;top:100%;left:0;background:#0a2f56;border:1px solid rgba(255,255,255,.1);min-width:180px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.15);z-index:999}
+.navbar li.has-dropdown>ul a{padding:10px 14px}
+
+/* Mobile */
+.nav-toggle{display:none;margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:8px;padding:8px 10px;cursor:pointer}
+@media (max-width:820px){
+  .navbar ul{display:none;flex-direction:column;width:100%}
+  .navbar ul.open{display:flex}
+  .nav-toggle{display:block}
+  .navbar li.has-dropdown>ul{position:static;box-shadow:none;border:0}
+}
+
+/* Hero (no external image; gradient block) */
+.hero{background:linear-gradient(135deg,#0b3e6b 0%,#154d7d 50%,#1e6aa0 100%);color:#fff;padding:36px 20px;margin:0 auto}
+.hero .wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* Main content */
+.container{max-width:1100px;margin:24px auto;display:grid;grid-template-columns:3fr 1.2fr;gap:24px;padding:0 12px}
+@media (max-width:900px){.container{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:14px;box-shadow:0 8px 24px rgba(10,47,86,.08);padding:18px 20px;border:1px solid #e6eef7}
+.card h2{font-size:20px;margin-bottom:10px;border-left:4px solid #1e6aa0;padding-left:10px}
+.card ul{padding-left:18px;margin-top:8px}
+.card li+li{margin-top:8px}
+.badge{display:inline-block;font-size:12px;background:#e6eef7;color:#0a2f56;padding:2px 8px;border-radius:999px;margin-left:8px}
+
+/* Sidebar widgets */
+.widget h3{font-size:16px;margin-bottom:10px;border-left:4px solid #0b3e6b;padding-left:8px}
+.widget .meta{font-size:13px;color:#5b6b7b}
+.widget ul{padding-left:18px}
+.widget li+li{margin-top:6px}
+
+/* Footer */
+.footer{margin-top:36px;background:#0a2f56;color:#ffffff; padding:20px 12px}
+.footer .inner{max-width:1100px;margin:0 auto;font-size:14px;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;opacity:.95}
+
+/* Tables (for Funding) */
+.table-like li{background:#fbfdff;border:1px solid #e6eef7;padding:10px;border-radius:10px}
+.table-like li strong{color:#0a2f56}
+
+/* People grid */
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.person{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:14px;box-shadow:0 4px 14px rgba(10,47,86,.06)}
+.person .role{font-size:12px;color:#567}
+.person .name{font-weight:700;margin-top:4px}
+
+/* Link styling */
+a.inline{color:#0b3e6b;text-decoration:none}
+a.inline:hover{ text-decoration:underline }

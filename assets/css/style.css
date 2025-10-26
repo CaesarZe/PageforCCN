@@ -44,3 +44,21 @@ a:hover{text-decoration:underline}
 .table-like li{background:#fbfdff;border:1px solid #e6eef7;padding:10px;border-radius:10px}
 .table-like li strong{color:#0a2f56}
 .small{font-size:13px;color:#4b5b6b}
+/* --- Dropdown click-mode --- */
+.navbar .has-dropdown { position: relative; }
+.navbar .has-dropdown ul {
+  display: none;               /* 由 JS 控制显示/隐藏 */
+  position: absolute;
+  top: 100%; left: 0;
+  background: #0d2a52;
+  border-radius: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 1000;
+}
+
+/* 禁用 hover 展开（重要） */
+.navbar .has-dropdown:hover ul { display: none !important; }
+

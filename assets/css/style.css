@@ -59,6 +59,43 @@ a:hover{text-decoration:underline}
   z-index: 1000;
 }
 
-/* 禁用 hover 展开（重要） */
-.navbar .has-dropdown:hover ul { display: none !important; }
+/* === Navbar 基本对齐与间距 === */
+.navbar { position: relative; }
+.navbar .inner { display: flex; align-items: center; gap: 16px; }
+.navbar .logo { display: flex; align-items: center; gap: 8px; }
+.navbar nav ul {
+  display: flex;
+  align-items: center;
+  gap: 36px;               /* 控制主菜单间距，统一所有页面 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Active 状态可继续用你原来的样式，这里略 */
+
+/* === Publications 下拉（点击模式） === */
+.navbar .has-dropdown { position: relative; }
+.navbar .has-dropdown > a { cursor: pointer; }
+
+.navbar .has-dropdown ul {
+  display: none;           /* 默认隐藏，由 JS 加 class 打开 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background: #0d2a52;
+  border-radius: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  margin: 8px 0 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-width: 220px;
+}
+
+/* 打开状态（由 JS 切换 .open 类） */
+.navbar .has-dropdown ul.open { display: flex; }
+
+
 

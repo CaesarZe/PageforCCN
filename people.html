@@ -6,10 +6,29 @@
 <title>People — CCNlab</title>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <style>
-  /* --- Page-specific tweaks --- */
-  /* Force People page into a single-column flow so nothing jumps to a sidebar */
-  main.container.onecol { display: block !important; }
+  /* Unified navbar layout fix */
+  .navbar .inner nav ul {
+    display:flex;
+    align-items:center;
+    gap:24px;
+    list-style:none;
+  }
+  .navbar .inner nav ul li {
+    position:relative;
+  }
 
+  /* One-column layout fix */
+  main.container.onecol {
+    display:flex !important;
+    flex-direction:column !important;
+    gap: 24px;
+  }
+  main.container.onecol > * {
+    width:100% !important;
+    max-width:100% !important;
+    grid-column:1 / -1 !important;
+    float:none !important;
+  }
   .member-card {
     background:#fff; border-radius:16px; padding:20px; margin-bottom:24px;
     box-shadow:0 0 8px rgba(0,0,0,0.08);
@@ -18,9 +37,6 @@
     width:140px; height:140px; border-radius:50%; object-fit:cover;
     margin:10px auto; display:block;
   }
-  /* Spacing & headings */
-  main.container.onecol section { margin: 28px 0; }
-  h2 { margin-bottom: 12px; }
 </style>
 </head>
 <body>
@@ -29,7 +45,7 @@
   <div class="site-subtitle">Computational Cognitive Neuroscience Lab · BNU</div>
 </header>
 
-<!-- Navbar unified with index.html -->
+<!-- Navbar identical to index.html -->
 <div class="navbar">
   <div class="inner">
     <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" width="20" height="20"/> CCNlab</a>
@@ -60,8 +76,6 @@
 </div>
 
 <main class="container onecol">
-
-  <!-- PI -->
   <section>
     <h2>Principal Investigator</h2>
     <div class="member-card">
@@ -74,10 +88,8 @@
     </div>
   </section>
 
-  <!-- Doctoral Students -->
   <section>
     <h2>Doctoral Students</h2>
-
     <div class="member-card">
       <img src="assets/images/dengguangzhi.jpg" alt="Guangzhi Deng" class="member-photo">
       <h4>Guangzhi Deng</h4>
@@ -123,7 +135,6 @@
     </div>
   </section>
 
-  <!-- Masters & RAs -->
   <section>
     <h2>Master Students & Research Assistants</h2>
     <div class="member-card"><h4>Jun Wang</h4><p><em>Master Student</em></p></div>
@@ -135,7 +146,159 @@
       <p><em>Research Assistant</em><br>State/Emotion-Dependent Direct Electrical Stimulation (DES); TMS, sEEG-Based DES</p>
     </div>
   </section>
+</main>
 
+<footer class="footer"><div class="inner">© 2025 CCNlab</div></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>People — CCNlab</title>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<style>
+  /* Unified navbar layout fix */
+  .navbar .inner nav ul {
+    display:flex;
+    align-items:center;
+    gap:24px;
+    list-style:none;
+  }
+  .navbar .inner nav ul li {
+    position:relative;
+  }
+
+  /* One-column layout fix */
+  main.container.onecol {
+    display:flex !important;
+    flex-direction:column !important;
+    gap: 24px;
+  }
+  main.container.onecol > * {
+    width:100% !important;
+    max-width:100% !important;
+    grid-column:1 / -1 !important;
+    float:none !important;
+  }
+  .member-card {
+    background:#fff; border-radius:16px; padding:20px; margin-bottom:24px;
+    box-shadow:0 0 8px rgba(0,0,0,0.08);
+  }
+  .member-photo {
+    width:140px; height:140px; border-radius:50%; object-fit:cover;
+    margin:10px auto; display:block;
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-title">People</div>
+  <div class="site-subtitle">Computational Cognitive Neuroscience Lab · BNU</div>
+</header>
+
+<!-- Navbar identical to index.html -->
+<div class="navbar">
+  <div class="inner">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" width="20" height="20"/> CCNlab</a>
+    <button class="nav-toggle">Menu</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="funding.html">Funding</a></li>
+        <li class="has-dropdown"><a href="javascript:void(0)">Publications ▾</a>
+          <ul>
+            <li><a href="publications/2025.html">2025</a></li>
+            <li><a href="publications/2024.html">2024</a></li>
+            <li><a href="publications/2023.html">2023</a></li>
+            <li><a href="publications/2022.html">2022</a></li>
+            <li><a href="publications/2021.html">2021</a></li>
+            <li><a href="publications/2020.html">2020</a></li>
+            <li><a href="publications/2019.html">2019</a></li>
+            <li><a href="publications/2013-2018.html">2013–2018</a></li>
+          </ul>
+        </li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main class="container onecol">
+  <section>
+    <h2>Principal Investigator</h2>
+    <div class="member-card">
+      <img src="assets/images/xupengfei.jpg" alt="Pengfei Xu" class="member-photo">
+      <h3>Prof. Pengfei Xu</h3>
+      <p><strong>Distinguished Professor</strong><br>
+      Faculty of Psychology, Beijing Normal University<br>
+      Email: <a href="mailto:pxu@bnu.edu.cn">pxu@bnu.edu.cn</a></p>
+      <p>Dr. Xu obtained his PhD degrees in Cognitive Neuroscience (Beijing Normal University) and Neuropsychiatry (University of Groningen). He is the Director of the Computational Cognitive Neuroscience Group and Deputy Director of the Beijing Key Laboratory of Applied Experimental Psychology. His research focuses on neurocognitive mechanisms of decision-making in emotional disorders, integrating neuroimaging, intracranial recording, computational modeling, and cognitive approaches.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Doctoral Students</h2>
+    <div class="member-card">
+      <img src="assets/images/dengguangzhi.jpg" alt="Guangzhi Deng" class="member-photo">
+      <h4>Guangzhi Deng</h4>
+      <p><em>Computational neural mechanisms of emotion and decision-making</em></p>
+      <p><strong>Publication:</strong><br>
+      Deng, G., Ai, H., Qin, L., Xu, J., Feng, C., & Xu, P. (2023). <em>Dissociated modulations of intranasal vasopressin on prosocial learning between reward-seeking and punishment-avoidance.</em> Psychological Medicine, 53(12), 5415-5427.</p>
+      <p><strong>Software:</strong><br>
+      Cognitive training system based on reward learning (Reg. No. 2021SR1796335)<br>
+      Cognitive training system based on punishment learning (Reg. No. 2021SR1796334)</p>
+    </div>
+
+    <div class="member-card">
+      <img src="assets/images/zhangyuxuan.jpg" alt="Yuxuan Zhang" class="member-photo">
+      <h4>Yuxuan Zhang</h4>
+      <p><em>Computational mechanisms of decision-making</em></p>
+      <p><strong>Publications:</strong><br>
+      1. Zhang, Y., et al. (2022). <em>Microstructural deficits of the thalamus in major depressive disorder.</em> Brain Communications.<br>
+      2. Zhang, Y., et al. (2025). <em>Frontostriatal connectivity dynamically modulates adaptation to environmental volatility.</em> NeuroImage.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="assets/images/zhangzeming.jpg" alt="Zeming Zhang" class="member-photo">
+      <h4>Zeming Zhang</h4>
+      <p><em>Cross-diagnostic classification and affective computing</em></p>
+      <p><strong>Publication:</strong><br>
+      Niu, W., Yu, H., Li, J., Zhang, Z., et al. (2025). <em>Predicting adolescent suicide risk using integrated data from adolescents, parents and siblings.</em> Journal of Affective Disorders.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="assets/images/baibinru.jpg" alt="Binru Bai" class="member-photo">
+      <h4>Binru Bai</h4>
+      <p><em>Adolescent affective disorders and etiological treatment research</em></p>
+      <p><strong>Publication:</strong><br>
+      Bai, B., et al. (2025). <em>Augmentative efficacy of second-generation anti-psychotics to antidepressants in treatment-resistant depression.</em> BMC Psychiatry.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="assets/images/chumeimei.jpg" alt="Meimei Chu" class="member-photo">
+      <h4>Meimei Chu</h4>
+      <p><em>Neurocognitive mechanisms and interventions of adolescent emotional disorders</em></p>
+      <p><strong>Publication:</strong><br>
+      Yang, M., Chu, M., et al. (2025). <em>Disaster Exposure and Insomnia Severity During 7·20 Flood in Henan.</em> PsyCh Journal.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Master Students & Research Assistants</h2>
+    <div class="member-card"><h4>Jun Wang</h4><p><em>Master Student</em></p></div>
+    <div class="member-card"><h4>Chen Tang</h4><p><em>Master Student — Decision and emotion-related computational neuroscience</em></p></div>
+    <div class="member-card"><h4>Zhiyi Dai</h4><p><em>Master Student</em></p></div>
+    <div class="member-card"><h4>Fangqi Shu</h4><p><em>Master Student</em></p></div>
+    <div class="member-card">
+      <h4>Xiaocheng Zhou</h4>
+      <p><em>Research Assistant</em><br>State/Emotion-Dependent Direct Electrical Stimulation (DES); TMS, sEEG-Based DES</p>
+    </div>
+  </section>
 </main>
 
 <footer class="footer"><div class="inner">© 2025 CCNlab</div></footer>

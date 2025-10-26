@@ -6,14 +6,21 @@
 <title>People — CCNlab</title>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <style>
-.member-card {
-  background:#fff;border-radius:16px;padding:20px;margin-bottom:24px;
-  box-shadow:0 0 8px rgba(0,0,0,0.08);
-}
-.member-photo {
-  width:140px;height:140px;border-radius:50%;
-  object-fit:cover;margin:10px auto;display:block;
-}
+  /* --- Page-specific tweaks --- */
+  /* Force People page into a single-column flow so nothing jumps to a sidebar */
+  main.container.onecol { display: block !important; }
+
+  .member-card {
+    background:#fff; border-radius:16px; padding:20px; margin-bottom:24px;
+    box-shadow:0 0 8px rgba(0,0,0,0.08);
+  }
+  .member-photo {
+    width:140px; height:140px; border-radius:50%; object-fit:cover;
+    margin:10px auto; display:block;
+  }
+  /* Spacing & headings */
+  main.container.onecol section { margin: 28px 0; }
+  h2 { margin-bottom: 12px; }
 </style>
 </head>
 <body>
@@ -22,6 +29,7 @@
   <div class="site-subtitle">Computational Cognitive Neuroscience Lab · BNU</div>
 </header>
 
+<!-- Navbar unified with index.html -->
 <div class="navbar">
   <div class="inner">
     <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" width="20" height="20"/> CCNlab</a>
@@ -31,7 +39,19 @@
         <li><a href="index.html">Home</a></li>
         <li class="active"><a href="people.html">People</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="research.html#outputs">Outputs</a></li>
+        <li><a href="funding.html">Funding</a></li>
+        <li class="has-dropdown"><a href="javascript:void(0)">Publications ▾</a>
+          <ul>
+            <li><a href="publications/2025.html">2025</a></li>
+            <li><a href="publications/2024.html">2024</a></li>
+            <li><a href="publications/2023.html">2023</a></li>
+            <li><a href="publications/2022.html">2022</a></li>
+            <li><a href="publications/2021.html">2021</a></li>
+            <li><a href="publications/2020.html">2020</a></li>
+            <li><a href="publications/2019.html">2019</a></li>
+            <li><a href="publications/2013-2018.html">2013–2018</a></li>
+          </ul>
+        </li>
         <li><a href="downloads.html">Downloads</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -39,7 +59,7 @@
   </div>
 </div>
 
-<main class="container">
+<main class="container onecol">
 
   <!-- PI -->
   <section>
@@ -99,11 +119,11 @@
       <h4>Meimei Chu</h4>
       <p><em>Neurocognitive mechanisms and interventions of adolescent emotional disorders</em></p>
       <p><strong>Publication:</strong><br>
-      Yang, M., Chu, M., et al. (2025). <em>Disaster Exposure and Insomnia Severity During 7⋅20 Flood in Henan.</em> PsyCh Journal.</p>
+      Yang, M., Chu, M., et al. (2025). <em>Disaster Exposure and Insomnia Severity During 7·20 Flood in Henan.</em> PsyCh Journal.</p>
     </div>
   </section>
 
-  <!-- Masters -->
+  <!-- Masters & RAs -->
   <section>
     <h2>Master Students & Research Assistants</h2>
     <div class="member-card"><h4>Jun Wang</h4><p><em>Master Student</em></p></div>
@@ -119,5 +139,6 @@
 </main>
 
 <footer class="footer"><div class="inner">© 2025 CCNlab</div></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
